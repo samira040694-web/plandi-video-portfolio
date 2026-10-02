@@ -2,22 +2,20 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PlanDi — Video Content Production Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
-
         :root {
             --black: #0b0b0b;
             --dark: #151515;
@@ -68,14 +66,20 @@
             justify-content: space-between;
         }
 
+        /* PLANdi LOGO */
+
         .logo {
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: -1.5px;
+            display: flex;
+            align-items: center;
+            line-height: 0;
         }
 
-        .logo span {
-            color: var(--red);
+        .logo img {
+            height: 42px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+            display: block;
         }
 
         .header-label {
@@ -241,7 +245,7 @@
         .project:hover {
             border-color: var(--black);
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
         }
 
         .project-number {
@@ -260,7 +264,7 @@
             background: var(--red);
         }
 
-        /* PREVIEW — ДОБАВЛЕНО */
+        /* PREVIEW */
 
         .project-preview {
             width: 100%;
@@ -269,6 +273,7 @@
             object-fit: cover;
             display: block;
             margin-bottom: 18px;
+            background: var(--gray-100);
         }
 
         .project-client {
@@ -467,6 +472,21 @@
                 padding: 0 20px;
             }
 
+            header {
+                padding: 24px 0;
+            }
+
+            .logo img {
+                height: 34px;
+                max-width: 150px;
+            }
+
+            .header-label {
+                font-size: 9px;
+                letter-spacing: 1px;
+                text-align: right;
+            }
+
             .hero {
                 padding: 60px 0;
             }
@@ -496,6 +516,10 @@
                 gap: 20px;
             }
 
+            .project-preview {
+                max-width: 100%;
+            }
+
             .project-link {
                 grid-column: 2;
                 justify-self: start;
@@ -508,9 +532,7 @@
             .footer-inner {
                 flex-direction: column;
             }
-
         }
-
     </style>
 
 </head>
@@ -522,7 +544,7 @@
     <div class="page header-inner">
 
         <div class="logo">
-            Plan<span>Di</span>
+            <img src="plandi-logo.png" alt="PlanDi">
         </div>
 
         <div class="header-label">
@@ -562,7 +584,6 @@
 
             </div>
 
-
             <div class="hero-side">
 
                 <strong>
@@ -600,7 +621,6 @@
 
             </div>
 
-
             <div class="stat">
 
                 <div class="stat-number">
@@ -612,7 +632,6 @@
                 </div>
 
             </div>
-
 
             <div class="stat">
 
@@ -642,7 +661,6 @@
                 <div class="section-number">
                     01 / OUR WORK
                 </div>
-
 
                 <div>
 
@@ -674,7 +692,6 @@
                         01
                     </div>
 
-
                     <div>
 
                         <img
@@ -699,18 +716,14 @@
 
                     </div>
 
-
                     <a
                         class="project-link"
                         href="https://www.linkedin.com/feed/update/urn:li:activity:7496537947161198592"
-                        target="_blank">
-
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         View publication
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        <span class="arrow">↗</span>
                     </a>
 
                 </article>
@@ -723,7 +736,6 @@
                     <div class="project-number">
                         02
                     </div>
-
 
                     <div>
 
@@ -749,18 +761,14 @@
 
                     </div>
 
-
                     <a
                         class="project-link"
                         href="https://www.linkedin.com/feed/update/urn:li:activity:7508457779205017600"
-                        target="_blank">
-
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         View publication
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        <span class="arrow">↗</span>
                     </a>
 
                 </article>
@@ -773,7 +781,6 @@
                     <div class="project-number">
                         03
                     </div>
-
 
                     <div>
 
@@ -798,18 +805,14 @@
 
                     </div>
 
-
                     <a
                         class="project-link"
                         href="https://www.linkedin.com/feed/update/urn:li:activity:7508409698119757824"
-                        target="_blank">
-
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         View publication
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        <span class="arrow">↗</span>
                     </a>
 
                 </article>
@@ -822,7 +825,6 @@
                     <div class="project-number">
                         04
                     </div>
-
 
                     <div>
 
@@ -847,18 +849,14 @@
 
                     </div>
 
-
                     <a
                         class="project-link"
                         href="https://www.linkedin.com/feed/update/urn:li:activity:7490736225889456128"
-                        target="_blank">
-
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         View publication
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        <span class="arrow">↗</span>
                     </a>
 
                 </article>
@@ -871,7 +869,6 @@
                     <div class="project-number">
                         05
                     </div>
-
 
                     <div>
 
@@ -897,18 +894,14 @@
 
                     </div>
 
-
                     <a
                         class="project-link"
                         href="https://www.linkedin.com/posts/plan-di_stronengineering-industrialengineering-engineering-activity-7483114764978733057-1VgZ"
-                        target="_blank">
-
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         View publication
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        <span class="arrow">↗</span>
                     </a>
 
                 </article>
@@ -921,7 +914,6 @@
                     <div class="project-number">
                         06
                     </div>
-
 
                     <div>
 
@@ -946,18 +938,14 @@
 
                     </div>
 
-
                     <a
                         class="project-link"
                         href="https://www.linkedin.com/feed/update/urn:li:activity:7498347666075095040"
-                        target="_blank">
-
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         View publication
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        <span class="arrow">↗</span>
                     </a>
 
                 </article>
@@ -970,7 +958,6 @@
                     <div class="project-number">
                         07
                     </div>
-
 
                     <div>
 
@@ -995,18 +982,14 @@
 
                     </div>
 
-
                     <a
                         class="project-link"
                         href="https://www.linkedin.com/feed/update/urn:li:activity:7487847533449392128"
-                        target="_blank">
-
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         View publication
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        <span class="arrow">↗</span>
                     </a>
 
                 </article>
@@ -1026,7 +1009,6 @@
         <div class="approach-inner">
 
             <div class="approach-grid">
-
 
                 <div>
 
@@ -1055,7 +1037,6 @@
 
 
                     <div class="principles">
-
 
                         <div class="principle">
 
@@ -1144,7 +1125,6 @@
 
                         </div>
 
-
                     </div>
 
                 </div>
@@ -1162,13 +1142,11 @@
 
         <div class="page">
 
-
             <div class="section-heading">
 
                 <div class="section-number">
                     03 / RESULT
                 </div>
-
 
                 <div>
 
@@ -1223,7 +1201,6 @@
                 <span>professional content.</span>
             </h2>
 
-
             <p>
                 PlanDi creates video content for engineering companies,
                 architects, designers, manufacturers and technical
@@ -1231,14 +1208,13 @@
                 global professional audience.
             </p>
 
-
             <a
                 class="cta-button"
                 href="https://wa.me/77076253176"
-                target="_blank">
-
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Contact us to order a video
-
             </a>
 
         </div>
