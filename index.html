@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PlanDi — Video Content Production Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0b0b0b;
+            --dark: #151515;
+            --red: #e30613;
+            --red-dark: #b9000a;
+            --white: #ffffff;
+            --gray-50: #f7f7f7;
+            --gray-100: #eeeeee;
+            --gray-300: #cfcfcf;
+            --gray-500: #777777;
+            --gray-700: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* HEADER */
+
+        header {
+            padding: 34px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .header-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gray-500);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 95px 0 80px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 70px;
+            align-items: end;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--red);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin-bottom: 25px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: var(--red);
+        }
+
+        h1 {
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            font-weight: 800;
+            max-width: 850px;
+        }
+
+        h1 span {
+            color: var(--red);
+        }
+
+        .hero-description {
+            font-size: 19px;
+            color: var(--gray-700);
+            max-width: 570px;
+            margin-top: 32px;
+        }
+
+        .hero-side {
+            border-left: 3px solid var(--red);
+            padding-left: 28px;
+        }
+
+        .hero-side strong {
+            display: block;
+            font-size: 22px;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .hero-side p {
+            color: var(--gray-500);
+            font-size: 15px;
+        }
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: var(--black);
+            color: white;
+            margin-bottom: 100px;
+        }
+
+        .stat {
+            padding: 30px 35px;
+            border-right: 1px solid #333;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 38px;
+            font-weight: 800;
+            color: white;
+        }
+
+        .stat-label {
+            margin-top: 5px;
+            font-size: 13px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* INTRO */
+
+        .section {
+            padding: 20px 0 100px;
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 0.65fr 1.35fr;
+            gap: 50px;
+            margin-bottom: 55px;
+        }
+
+        .section-number {
+            font-size: 13px;
+            color: var(--red);
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 42px;
+            line-height: 1.08;
+            letter-spacing: -1.8px;
+        }
+
+        .section-intro {
+            color: var(--gray-500);
+            margin-top: 18px;
+            max-width: 720px;
+            font-size: 16px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            gap: 20px;
+        }
+
+        .project {
+            border: 1px solid var(--gray-100);
+            background: white;
+            padding: 34px;
+            display: grid;
+            grid-template-columns: 70px 1fr auto;
+            gap: 30px;
+            align-items: center;
+            transition: all 0.25s ease;
+        }
+
+        .project:hover {
+            border-color: var(--black);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+        }
+
+        .project-number {
+            width: 54px;
+            height: 54px;
+            background: var(--black);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .project:hover .project-number {
+            background: var(--red);
+        }
+
+        .project-client {
+            font-size: 23px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .project-description {
+            margin-top: 7px;
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+
+        .project-category {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--red);
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border: 1px solid var(--black);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            white-space: nowrap;
+            transition: 0.2s ease;
+        }
+
+        .project-link:hover {
+            background: var(--red);
+            color: white;
+            border-color: var(--red);
+        }
+
+        .arrow {
+            font-size: 16px;
+        }
+
+        /* APPROACH */
+
+        .approach {
+            background: var(--black);
+            color: white;
+            padding: 80px 0;
+            margin-top: 20px;
+        }
+
+        .approach-inner {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 32px;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+        }
+
+        .approach h2 {
+            color: white;
+        }
+
+        .approach-text {
+            color: #aaa;
+            font-size: 16px;
+            max-width: 650px;
+        }
+
+        .principles {
+            margin-top: 35px;
+            display: grid;
+            gap: 18px;
+        }
+
+        .principle {
+            display: flex;
+            gap: 15px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #292929;
+        }
+
+        .principle-number {
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        .principle strong {
+            display: block;
+            color: white;
+            margin-bottom: 3px;
+        }
+
+        .principle span {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* RESULTS */
+
+        .result-box {
+            background: var(--gray-50);
+            padding: 50px;
+            border-left: 5px solid var(--red);
+            margin-top: 40px;
+        }
+
+        .result-box h3 {
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .result-box p {
+            color: var(--gray-700);
+            max-width: 850px;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(40px, 6vw, 68px);
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .cta h2 span {
+            color: var(--red);
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 25px auto 35px;
+            color: var(--gray-500);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 17px 30px;
+            background: var(--red);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--black);
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--gray-100);
+            padding: 28px 0;
+            color: var(--gray-500);
+            font-size: 12px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            color: var(--black);
+            font-weight: 800;
+        }
+
+        .footer-logo span {
+            color: var(--red);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .page {
+                padding: 0 20px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero-grid,
+            .section-heading,
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            h1 {
+                letter-spacing: -2.5px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+
+            .project {
+                grid-template-columns: 50px 1fr;
+                gap: 20px;
+            }
+
+            .project-link {
+                grid-column: 2;
+                justify-self: start;
+            }
+
+            .result-box {
+                padding: 30px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="page header-inner">
+        <div class="logo">Plan<span>Di</span></div>
+
+        <div class="header-label">
+            Creative & Video Production
+        </div>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="page hero-grid">
+
+            <div>
+
+                <div class="eyebrow">
+                    Selected Works
+                </div>
+
+                <h1>
+                    Video content<br>
+                    created for<br>
+                    <span>AEC professionals.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A selection of video projects created by PlanDi for
+                    engineering companies, designers, architects and
+                    industry professionals — and published on LinkedIn.
+                </p>
+
+            </div>
+
+
+            <div class="hero-side">
+
+                <strong>
+                    We don't simply create a video.
+                </strong>
+
+                <p>
+                    We turn technical expertise, projects and ideas into
+                    professional visual content designed for the
+                    international AEC audience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="page">
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    07
+                </div>
+
+                <div class="stat-label">
+                    Selected video projects
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    AEC
+                </div>
+
+                <div class="stat-label">
+                    Architecture · Engineering · Construction
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    01
+                </div>
+
+                <div class="stat-label">
+                    Professional content ecosystem
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OUR WORK -->
+
+    <section class="section">
+
+        <div class="page">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    01 / OUR WORK
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        From technical expertise
+                        to visual storytelling.
+                    </h2>
+
+                    <p class="section-intro">
+                        Each project was developed as professional
+                        social-media content: concept, visual storytelling,
+                        editing, pacing and presentation were adapted to
+                        the client's professional field and LinkedIn audience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="projects">
+
+
+                <!-- PROJECT 01 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <div class="project-client">
+                            Exclusive Tents International
+                        </div>
+
+                        <div class="project-description">
+                            Video content created to present the company's
+                            products and visual identity in a professional
+                            international format.
+                        </div>
+
+                        <div class="project-category">
+                            Industrial · Architecture · Products
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7496537947161198592"
+                        target="_blank">
+
+                        View publication
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 02 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+
+                    <div>
+
+                        <div class="project-client">
+                            Mohsin Zaheer
+                        </div>
+
+                        <div class="project-description">
+                            Professional visual presentation of an
+                            architectural visualization specialist and
+                            his digital design expertise.
+                        </div>
+
+                        <div class="project-category">
+                            Architectural Visualization · 3D · Design
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7508457779205017600"
+                        target="_blank">
+
+                        View publication
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 03 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+
+                    <div>
+
+                        <div class="project-client">
+                            Nugzar Nachkebia
+                        </div>
+
+                        <div class="project-description">
+                            Video presentation of an innovative kinematic
+                            solution for material handling equipment.
+                        </div>
+
+                        <div class="project-category">
+                            Engineering · Innovation · Equipment
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7508409698119757824"
+                        target="_blank">
+
+                        View publication
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 04 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        04
+                    </div>
+
+
+                    <div>
+
+                        <div class="project-client">
+                            Fahmi Alganadi
+                        </div>
+
+                        <div class="project-description">
+                            Professional video content developed around
+                            engineering expertise and technical communication.
+                        </div>
+
+                        <div class="project-category">
+                            Engineering · Professional Branding
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7490736225889456128"
+                        target="_blank">
+
+                        View publication
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 05 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        05
+                    </div>
+
+
+                    <div>
+
+                        <div class="project-client">
+                            Stron Engineering
+                        </div>
+
+                        <div class="project-description">
+                            Corporate video content presenting Stron Engineering,
+                            its industrial expertise and international
+                            engineering capabilities.
+                        </div>
+
+                        <div class="project-category">
+                            Industrial Engineering · BIM · Corporate
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/posts/plan-di_stronengineering-industrialengineering-engineering-activity-7483114764978733057-1VgZ"
+                        target="_blank">
+
+                        View publication
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 06 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        06
+                    </div>
+
+
+                    <div>
+
+                        <div class="project-client">
+                            Evgenii Davydov
+                        </div>
+
+                        <div class="project-description">
+                            Visual content created to communicate professional
+                            expertise through a modern LinkedIn video format.
+                        </div>
+
+                        <div class="project-category">
+                            Engineering · Personal Brand
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7498347666075095040"
+                        target="_blank">
+
+                        View publication
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 07 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        07
+                    </div>
+
+
+                    <div>
+
+                        <div class="project-client">
+                            Talleres Metálicos
+                        </div>
+
+                        <div class="project-description">
+                            Professional video content created to showcase
+                            the company's industrial capabilities and work.
+                        </div>
+
+                        <div class="project-category">
+                            Industrial · Manufacturing · Engineering
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7487847533449392128"
+                        target="_blank">
+
+                        View publication
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPROACH -->
+
+    <section class="approach">
+
+        <div class="approach-inner">
+
+            <div class="approach-grid">
+
+
+                <div>
+
+                    <div class="eyebrow">
+                        02 / APPROACH
+                    </div>
+
+                    <h2>
+                        Content built for
+                        professional audiences.
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p class="approach-text">
+                        PlanDi works at the intersection of technology,
+                        engineering and digital communication. Our video
+                        production approach is designed specifically for
+                        professional audiences where technical information
+                        needs to remain clear while the presentation remains
+                        visually engaging.
+                    </p>
+
+
+                    <div class="principles">
+
+
+                        <div class="principle">
+
+                            <div class="principle-number">
+                                01
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Understanding the subject
+                                </strong>
+
+                                <span>
+                                    We work with the client's expertise,
+                                    project and technical information.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="principle">
+
+                            <div class="principle-number">
+                                02
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Visual storytelling
+                                </strong>
+
+                                <span>
+                                    Complex professional information is
+                                    transformed into a clear visual narrative.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="principle">
+
+                            <div class="principle-number">
+                                03
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Platform-native format
+                                </strong>
+
+                                <span>
+                                    Content is prepared specifically for
+                                    LinkedIn and professional social media.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="principle">
+
+                            <div class="principle-number">
+                                04
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Professional positioning
+                                </strong>
+
+                                <span>
+                                    Every video contributes to the company's
+                                    or specialist's digital presence.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+
+    <section class="section">
+
+        <div class="page">
+
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    03 / RESULT
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        More than a video.
+                        A professional presence.
+                    </h2>
+
+                    <p class="section-intro">
+                        The projects presented above demonstrate how PlanDi
+                        can transform engineering, architecture, industrial
+                        products and professional expertise into content
+                        suitable for an international business audience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <h3>
+                    Our clients value the final result.
+                </h3>
+
+                <p>
+                    We create content with a clear objective: to present
+                    professionals and companies in a way that reflects their
+                    expertise, strengthens their digital presence and makes
+                    complex technical subjects easier to understand.
+                    The selected projects represent completed PlanDi work
+                    delivered for professionals and companies across the
+                    engineering, industrial and architectural sectors.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="page">
+
+            <h2>
+                Your expertise deserves
+                <span>professional content.</span>
+            </h2>
+
+
+            <p>
+                PlanDi creates video content for engineering companies,
+                architects, designers, manufacturers and technical
+                specialists who want to communicate their expertise to a
+                global professional audience.
+            </p>
+
+
+            <a
+                class="cta-button"
+                href="https://wa.me/77076253176"
+                target="_blank">
+
+               Contact us to order a video
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="page footer-inner">
+
+        <div class="footer-logo">
+            Plan<span>Di</span>
+        </div>
+
+        <div>
+            Creative & Digital Content for AEC
+        </div>
+
+        <div>
+            © PlanDi
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
